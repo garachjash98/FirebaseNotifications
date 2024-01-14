@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Firebase Notification Demo</string>
+    <string name="noti_accept">Accept</string>
+    <string name="noti_decline">Decline</string>
+    <string name="default_notification_channel_id">com.example.firebasenotificationdemo</string>
+    <string name="subs_to_topic">Subscribe for Notification</string>
+    <string name="subs_txt">Subscribe</string>
+    <string name="un_subs_txt">Unsubscribe</string>
+    <string name="topic_subs_done">Topic Subscribe Successfully</string>
+    <string name="topic_un_subs_done">Topic UnSubscribe Successfully</string>
+    <string name="topic_subs_fail">Fail to subscribe topic</string>
+    <string name="topic_un_subs_fail">Fail to unsubscribe topic</string>
+    <string name="subscribe_user_title">User Subscribed</string>
+    <string name="subscribe_user_already">User already subscribed</string>
+    <string name="noti_permission_denied">Notifications Permission Denied</string>
+    <string name="noti_permission_allow">Notifications Permission Allowed</string>
+    <string name="msg_app_name">Messages: SMS Messaging</string>
+    <string name="set_as_default_message">Please set our app as the default. On clicking \u0027OK\u0027, the \u0027Set as Default\u0027 dialog will open.</string>
+    <string name="set_as_default_decline">Declined</string>
+    <string name="okay_txt">OK</string>
+</resources>
