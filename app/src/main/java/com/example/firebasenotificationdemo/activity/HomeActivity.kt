@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
@@ -27,10 +28,12 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
     private var sharedPrefs: SharedPrefs? = null
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             if (ContextCompat.checkSelfPermission(
@@ -75,8 +78,8 @@ class HomeActivity : AppCompatActivity() {
         val fromCustomNotification = intent.getStringExtra(fromCustomNotification)
         val fromNotificationId = intent.getIntExtra(intentNotificationId, 0)
         NotificationManagerCompat.from(this@HomeActivity).cancel(fromNotificationId)
-        when (fromCustomNotification){
-            "accept"->{
+        when (fromCustomNotification) {
+            "accept" -> {
                 CustomAlertDialog(this@HomeActivity)
                     .createDialog(
                         title = resources.getString(R.string.msg_app_name),
@@ -84,7 +87,8 @@ class HomeActivity : AppCompatActivity() {
                         positiveButtonText = resources.getString(R.string.okay_txt)
                     )
             }
-            "decline"->{
+
+            "decline" -> {
                 CustomAlertDialog(this@HomeActivity)
                     .createDialog(
                         title = resources.getString(R.string.msg_app_name),

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Firebase Notification Demo</string>
+    <string name="app_name">Firebase Topic Notification</string>
     <string name="noti_accept">Accept</string>
     <string name="noti_decline">Decline</string>
     <string name="default_notification_channel_id">com.example.firebasenotificationdemo</string>
